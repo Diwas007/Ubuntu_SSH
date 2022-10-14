@@ -45,5 +45,6 @@ jobs:
         bash Setup.sh "${{ env.NGROK_TOKEN }}" "${{ env.ComputerName }}" "${{ github.event.inputs.username }}" "${{ env.Password }}"
     - name: IP for Connect to your SSH.
       run: bash Ip.sh "${{ github.event.inputs.username }}"
-    - name: Keep Alive.
-      run: ping 127.0.0.1 > null
+    - name: Keeping Alive
+      run: sleep 360m
+      shell: bash
